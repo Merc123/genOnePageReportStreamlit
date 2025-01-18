@@ -34,16 +34,16 @@ footer_text = st.write(extract_text_from_analysis_file(os.path.join(group + ".tx
 template = Template(os.path.join(group + ".html"))
 context = {
   'title_name' : title_name,
-  # 'logo_path' : logo_path,
+  'logo_path' : logo_path,
   'summary_title_name' : summary_title_name,
   'summary_text' : summary_text,      
   'kpi_title_name' : kpi_title_name,
-  # 'kpi_data' : kpi_data,
+  'kpi_data' : kpi_data,
   'chart_title_name' : chart_title_name,
-  # 'chart_path' : chart_path,
+  'chart_path' : chart_path,
   'chart_writeup': chart_writeup,      
   'datatable_tile_name' : datatable_tile_name,
-  # 'data_table' : data_table,
+  'data_table' : data_table,
   'footer_text' : footer_text
 }
 rendered_html = template.render(context)
