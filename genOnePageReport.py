@@ -2,6 +2,7 @@ import os
 
 import pandas as pd
 import streamlit as st
+from PIL import Image
 from jinja2 import Template
 
 ONE_PAGE_PROFFESIONALLY_REPORT = """
@@ -229,13 +230,13 @@ def extract_text_from_analysis_file(file_path, tag):
 group = 'Analysis1'
 df_analysis = pd.read_csv(os.path.join(group + ".csv"))
 title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name"))
-logo_path = st.write(os.path.join("logo.png"))
+logo_path = st.image(Image.open(os.path.join("logo.png")))
 summary_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Title_Name"))
 summary_text = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Text"))
 kpi_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "KPI_Title_Name"))
 kpi_data = st.write(df_analysis[["x1", "y1", "z1", "x2"]].tail(1))
 chart_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Title_Name"))
-chart_path = st.write(os.path.join(group + ".png"))
+chart_path = st.image(Image.open(os.path.join(group + ".png")))
 chart_writeup = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Writeup"))
 datatable_tile_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "DataTable_Tile_Name"))
 data_table = st.write(df_analysis)
