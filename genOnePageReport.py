@@ -227,7 +227,7 @@ data_table = st.write(df_analysis)
 footer_text = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Footer_Text"))
 
 # Render the template with the report content
-template = Template(ONE_PAGE_PROFFESIONALLY_REPORT)
+template = Template(os.path.join(group + ".html"))
 context = {
   'title_name' : title_name,
   # 'logo_path' : logo_path,
