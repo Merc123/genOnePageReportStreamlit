@@ -272,5 +272,5 @@ rendered_html = template.render(context)
 
 # Save the rendered report to an HTML file
 with open("executive_summary_report.html", "w") as file:
-file.write(rendered_html)
+    file.write(rendered_html)
 
