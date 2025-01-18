@@ -235,7 +235,7 @@ def main():
       # 'logo_path' : logo_path,
       'summary_title_name' : summary_title_name,
       'summary_text' : summary_text,      
-      'kpi_title_name' : kpi_title_nametle_name,
+      'kpi_title_name' : kpi_title_name,
       # 'kpi_data' : kpi_data,
       'chart_title_name' : chart_title_name,
       # 'chart_path' : chart_path,
