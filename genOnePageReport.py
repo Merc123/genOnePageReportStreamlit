@@ -229,7 +229,7 @@ def extract_text_from_analysis_file(file_path, tag):
 group = 'Analysis1'
 df_analysis = pd.read_csv(os.path.join(group + ".csv"))
 title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name"))
-logo_path = st.write(os.path.join("/logo.png"))
+logo_path = st.write(os.path.join("logo.png"))
 summary_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Title_Name"))
 summary_text = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Text"))
 kpi_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "KPI_Title_Name"))
