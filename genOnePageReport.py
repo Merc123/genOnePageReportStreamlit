@@ -19,9 +19,13 @@ group = 'Analysis1'
 df_analysis = pd.read_csv(os.path.join(group + ".csv"))
 # Render the template with the report content
 template = Template(os.path.join(group + ".html"))
+# Setup the title section of a 
+title_col1, title_col2 = st.columns([3, 1])
 context = {
-  'title_name' : st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name")),
-  'logo_path' : st.image(Image.open(os.path.join("logo.png"))),
+  with title_col1:
+    'title_name' : st.title(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name")),
+  with title_col2:
+    'logo_path' : st.image(Image.open(os.path.join("logo.png")), width=100),
   'summary_title_name' : st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Title_Name")),
   'summary_text' : st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Text")),      
   'kpi_title_name' : st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "KPI_Title_Name")),
