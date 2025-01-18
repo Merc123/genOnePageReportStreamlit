@@ -225,18 +225,18 @@ def extract_text_from_analysis_file(file_path, tag):
 # footer_text = extract_text_from_analysis_file(os.path.join(output_dir, group + ".txt"), "Footer_Text")
 
 group = 'Analysis1'
-# df_analysis = pd.read_csv(os.path.join(output_dir, group + ".csv"))
+df_analysis = pd.read_csv(os.path.join(group + ".csv"))
 title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name"))
-# logo_path = st.write(os.path.join(output_dir + "/logo.png"))
+logo_path = st.write(os.path.join(output_dir + "/logo.png"))
 summary_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Title_Name"))
 summary_text = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Text"))
 kpi_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "KPI_Title_Name"))
-# kpi_data = st.write(df_analysis[["x1", "y1", "z1", "x2"]].tail(1))
+kpi_data = st.write(df_analysis[["x1", "y1", "z1", "x2"]].tail(1))
 chart_title_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Title_Name"))
-# chart_path = st.write(os.path.join(group + ".png"))
+chart_path = st.write(os.path.join(group + ".png"))
 chart_writeup = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Writeup"))
 datatable_tile_name = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "DataTable_Tile_Name"))
-# data_table = st.write(df_analysis)
+data_table = st.write(df_analysis)
 footer_text = st.write(extract_text_from_analysis_file(os.path.join(group + ".txt"), "Footer_Text"))
 
 # title_name = st.write("Annual Report 2024")
