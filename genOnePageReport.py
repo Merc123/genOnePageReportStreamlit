@@ -215,18 +215,33 @@ def main():
   # data_table = df_analysis
   # footer_text = extract_text_from_analysis_file(os.path.join(output_dir, group + ".txt"), "Footer_Text")
 
-  title_name = st.write("Annual Report 2024")
+  group = 'Analysis1'
+  df_analysis = pd.read_csv(os.path.join(output_dir, group + ".csv"))
+  title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name")
   # logo_path = os.path.join(output_dir + "/logo.png")
-  summary_title_name = st.write("Annual Performance Highlights")
-  summary_text = st.write("This annual report provides an overview of our company’s performance for the year 2024. It includes key metrics, highlights of the achievements, and a financial summary to reflect our growth trajectory. Our commitment to excellence continues to drive our success and innovation in the industry.")
-  kpi_title_name = st.write("Key Performance Indicators (KPIs)")
+  summary_title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Title_Name")
+  summary_text = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Text")
+  kpi_title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "KPI_Title_Name")
   # kpi_data = df_analysis[["x1", "y1", "z1", "x2"]].tail(1)
-  chart_title_name = st.write("Quarterly Performance Analysis")
-  # chart_path = st.write("Annual Report 2024")
-  chart_writeup = st.write("2024 has been a transformative year for our organization. We launched several key initiatives that not only enhanced our operational efficiency but also improved customer satisfaction. Our revenue growth of 20% compared to the previous year is a testament to the hard work and dedication of our team. Moving forward, we will continue to invest in technology and talent to ensure sustainable growth and to meet the evolving needs of our customers.")
-  datatable_tile_name = st.write("Performance Data")
+  chart_title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Title_Name")
+  chart_path = os.path.join(output_dir, group + ".png")
+  chart_writeup = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Writeup")
+  datatable_tile_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "DataTable_Tile_Name")
   # data_table = df_analysis
-  footer_text = st.write("Confidential - Company Use Only | Date: 2024-12-02")
+  footer_text = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Footer_Text")
+
+  # title_name = st.write("Annual Report 2024")
+  # # logo_path = os.path.join(output_dir + "/logo.png")
+  # summary_title_name = st.write("Annual Performance Highlights")
+  # summary_text = st.write("This annual report provides an overview of our company’s performance for the year 2024. It includes key metrics, highlights of the achievements, and a financial summary to reflect our growth trajectory. Our commitment to excellence continues to drive our success and innovation in the industry.")
+  # kpi_title_name = st.write("Key Performance Indicators (KPIs)")
+  # # kpi_data = df_analysis[["x1", "y1", "z1", "x2"]].tail(1)
+  # chart_title_name = st.write("Quarterly Performance Analysis")
+  # # chart_path = st.write("Annual Report 2024")
+  # chart_writeup = st.write("2024 has been a transformative year for our organization. We launched several key initiatives that not only enhanced our operational efficiency but also improved customer satisfaction. Our revenue growth of 20% compared to the previous year is a testament to the hard work and dedication of our team. Moving forward, we will continue to invest in technology and talent to ensure sustainable growth and to meet the evolving needs of our customers.")
+  # datatable_tile_name = st.write("Performance Data")
+  # # data_table = df_analysis
+  # footer_text = st.write("Confidential - Company Use Only | Date: 2024-12-02")
   
   # Render the template with the report content
   template = Template(ONE_PAGE_PROFFESIONALLY_REPORT)
