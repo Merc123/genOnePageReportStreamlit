@@ -250,8 +250,5 @@ def main():
   with open("executive_summary_report.html", "w") as file:
     file.write(rendered_html)
 
-  st.success("Report has been generated as 'executive_summary_report.html'.")
-  st.markdown("[View Report](./executive_summary_report.html)", unsafe_allow_html=True)
-
 if __name__ == "__main__":
   main()
