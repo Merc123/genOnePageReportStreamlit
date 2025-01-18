@@ -1,6 +1,8 @@
+import os
+
+import pandas as pd
 import streamlit as st
 from jinja2 import Template
-import os
 
 ONE_PAGE_PROFFESIONALLY_REPORT = """
 <!DOCTYPE html>
