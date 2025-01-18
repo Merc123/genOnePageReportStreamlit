@@ -234,7 +234,7 @@ def main():
   kpi_title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "KPI_Title_Name")
   # kpi_data = df_analysis[["x1", "y1", "z1", "x2"]].tail(1)
   chart_title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Title_Name")
-  chart_path = os.path.join(output_dir, group + ".png")
+  # chart_path = os.path.join(group + ".png")
   chart_writeup = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Chart_Writeup")
   datatable_tile_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "DataTable_Tile_Name")
   # data_table = df_analysis
