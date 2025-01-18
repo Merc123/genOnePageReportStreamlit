@@ -198,17 +198,17 @@ ONE_PAGE_PROFFESIONALLY_REPORT = """
 </body>
 </html>
 """
+# Function to extract text under a specified tag for Analysis
+def extract_text_from_analysis_file(file_path, tag):
+  with open(file_path, 'r') as file:
+    lines = file.readlines()
+    for i, line in enumerate(lines):
+      if line.strip() == f"[{tag}]":
+        # Return the text below the tag (if it exists)
+        return lines[i + 1].strip() if i + 1 < len(lines) else None
+  return None
 
 def main():
-    # Function to extract text under a specified tag for Analysis
-    def extract_text_from_analysis_file(file_path, tag):
-      with open(file_path, 'r') as file:
-        lines = file.readlines()
-        for i, line in enumerate(lines):
-          if line.strip() == f"[{tag}]":
-            # Return the text below the tag (if it exists)
-            return lines[i + 1].strip() if i + 1 < len(lines) else None
-      return None
   # output_dir = '/content/Report_Test1'
   # group = 'Analysis1'
   # df_analysis = pd.read_csv(os.path.join(output_dir, group + ".csv"))
