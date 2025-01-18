@@ -229,12 +229,20 @@ def main():
   footer_text = st.write("Confidential - Company Use Only | Date: 2024-12-02")
   
   # Render the template with the report content
-  template = Template(EXECUTIVE_SUMMARY_TEMPLATE)
+  template = Template(ONE_PAGE_PROFFESIONALLY_REPORT)
   context = {
-      'title': report_title,
-      'summary': summary,
-      'key_findings': key_findings,
-      'recommendations': recommendations
+      'title_name' : title_name,
+      # 'logo_path' : logo_path,
+      'summary_title_name' : summary_title_name,
+      'summary_text' : summary_text,      
+      'kpi_title_name' : tikpi_title_nametle_name,
+      # 'kpi_data' : kpi_data,
+      'chart_title_name' : chart_title_name,
+      # 'chart_path' : chart_path,
+      'chart_writeup': chart_writeup,      
+      'datatable_tile_name' : datatable_tile_name,
+      # 'data_table' : data_table,
+      'footer_text' : footer_text
   }
   rendered_html = template.render(context)
 
