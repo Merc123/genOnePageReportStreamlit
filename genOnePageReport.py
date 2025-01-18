@@ -1,5 +1,6 @@
 import streamlit as st
 from jinja2 import Template
+import os
 
 ONE_PAGE_PROFFESIONALLY_REPORT = """
 <!DOCTYPE html>
@@ -216,7 +217,7 @@ def main():
   # footer_text = extract_text_from_analysis_file(os.path.join(output_dir, group + ".txt"), "Footer_Text")
 
   group = 'Analysis1'
-  df_analysis = pd.read_csv(os.path.join(output_dir, group + ".csv"))
+  # df_analysis = pd.read_csv(os.path.join(output_dir, group + ".csv"))
   title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Title_Name")
   # logo_path = os.path.join(output_dir + "/logo.png")
   summary_title_name = extract_text_from_analysis_file(os.path.join(group + ".txt"), "Summary_Title_Name")
